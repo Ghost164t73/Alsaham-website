@@ -1,0 +1,383 @@
+* {
+    margin: 0;
+    padding: 0;
+    transition: .2s linear;
+    font-family: monospace;
+    box-sizing: border-box;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #333;
+    border-radius: 5rem;
+}
+
+body {
+    min-height: 300vh; 
+}
+.fade-in{
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease 0.7s, transform 0.5s ease 0.2s;
+}
+
+.header {
+    background-color: rgba(55, 158, 210, 0.9);
+    background: url(../images/taylor-heery-qwvydaAOEDw-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 750px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0)
+    );
+}
+
+.sticky-header {
+    background-color: rgb(0, 127, 245);
+    color: #fff;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+  }
+
+nav ul {
+    list-style: none;
+    display: flex;
+    position: absolute;
+    top: 40px;
+    right: 0; 
+}
+
+img {
+    width: 300px;
+    height: 100px;
+    object-fit: cover;
+    margin-left: -30px;
+}
+
+nav ul li {
+    margin-right: 50px;
+    font-size: 1.3em;
+    float: left; 
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    z-index: 0;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+nav ul li a:hover,
+nav ul li a:focus{
+    color: rgba(8, 152, 224, 0.9);
+    transition: color 0.5s ease;
+}
+
+.fa-solid {
+    display: none;
+    cursor: pointer;
+}
+
+.fa-solid:hover{
+    opacity: 0.8;
+}
+
+nav ul a {
+    color: black;
+}
+
+.card .circle {
+    position: absolute;
+    top: 40px;
+    left: 450px;
+}
+
+.card .circle a {
+    color: black;
+}
+
+.card .content {
+    margin: -120px;
+    margin-top: -65px;
+    padding: 20px;
+    width: 100px;
+    visibility: hidden;
+    background: rgba(8, 152, 224, 0.9); 
+    border-radius: 10px;
+    box-shadow: 5px 4px 9px black;
+    overflow: hidden;
+    color: white; 
+}
+
+.card .circle .fa-solid {
+    height: 100px;
+    color: white;
+}
+
+.card .content ul {
+    list-style: none;
+    line-height: 20px;
+}
+
+.card .content ul li {
+    border-bottom: 1px solid black ;
+    display: block;
+    padding: 10px;
+}
+
+.card .content ul li:hover{
+    opacity: 0.7;
+}
+
+.card .content ul li:nth-child(4) {
+    border-bottom: none;
+}
+
+.card .content ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.text{
+    font-size: 4rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 50vh;
+    color: #ffffff;
+    margin: 30px;
+    font-weight: 600;
+}
+
+.text p{
+    position: absolute;
+    top:200px;
+}
+
+.text p em{
+    color: rgb(55, 158, 210, 0.9);
+    margin: 20px;
+    font-style: normal;
+}
+
+.white-paragraph{
+    display: flex;
+    justify-content: center;
+    height: 70vh;
+    align-items: center;
+    background: transparent;
+    margin: 40px;
+}
+
+.white-paragraph p{
+    font-size: 2em;
+    color: #ffff;
+    padding: 30px;
+    background: linear-gradient(to right,rgb(0, 101, 208),rgb(0, 54, 117));
+    border-radius: 50px;
+    animation-name: slideLeft;
+    animation-duration: 1s;
+}
+  
+.container1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 100px;
+    height:90vh;
+    background: transparent;
+    margin-top: 40px;
+}
+
+.container1 .image1{
+    width: 50vw ;
+    height: 90vh;
+    position: absolute;
+    top: 0;
+    right: 0; 
+    border: white;
+}
+
+.container1 .para1 p {
+    font-weight: bold;
+    width: 40vw;
+    height: 40%;
+    position: absolute;
+    text-align: left;
+    top: 10%; /* Adjust the top position as a percentage of the parent container's height */
+    left: 5%; /* Adjust the right position as a percentage of the parent container's width */
+    font-size: 2vw; /* Adjust the font size as a percentage of the viewport width */
+    line-height: 8vh; /* Adjust the line height as a percentage of the viewport height */
+}
+
+
+.container img{
+    width: 500px;
+    height: 400px;
+    position: fixed;
+    top: 40px;
+    right: 40px; 
+    border: none;
+}
+
+.container .para1 p em{
+    color: rgb(0, 127, 245);
+    font-size: 2.4rem;
+    margin: 10px;
+    font-style: normal;
+}
+
+.last-container{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: #222;
+    position: relative;
+}
+
+.last-container .sub-container button{
+    padding: 20px 50px;
+    border: none;
+    border-radius: 30px;
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    cursor: pointer;
+    color: #ffff;
+    background: rgb(0, 101, 208);
+    text-transform: uppercase;
+}
+
+.last-container .sub-container button:hover{
+    background: #fff;
+    color: rgb(0, 101, 208);
+}
+
+.last-container img{
+    position: absolute;
+    top: 100px;
+    right: 30px;
+    width: 500px;
+    height: 500px;
+}
+
+@media screen and (max-width: 1009px) {
+    nav ul li {
+        visibility: hidden;
+    }
+
+    body {
+        min-height: 200vh;
+        overflow-x: hidden;
+    }
+
+    .fa-solid,
+    .fa-bounce {
+        display: inline-block;
+        height: 100px;
+        font-size: 2em;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+    }
+
+    .text {
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .text p{
+        position: absolute;
+        top: 300px;
+        left: 40px;
+    }
+
+    .container .para p{
+     justify-content: center;
+    }
+
+    
+    .container{
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        height: 80vh;
+        width: 80vw;
+        background: blue;
+        position: relative;
+        border-radius: 5rem;
+    }
+
+    .container .di-image img{
+        width: 80vw;
+        height:40vh;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 5rem 5rem 0rem 0rem;
+    }
+
+    .container .sub-container p{
+        position: absolute;
+        top: 250px;
+        left: 0px;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+}
+
+
+@keyframes slideLeft{
+    from{transform: translatex(300%)}
+  }
+  
+  @keyframes slideRight{
+      from{transform: translateX(-300%);}
+  }
+  
+  @keyframes slideUp{
+      from{transform: translateY(50%)}
+  }
+  
+  @keyframes fadeIn{
+      from{opacity: 0;}
+      to {opacity: 1;}
+  }
+  
+  

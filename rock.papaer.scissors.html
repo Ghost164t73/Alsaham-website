@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock paper scissors</title>
+
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            justify-content: center;
+        }
+
+        body{
+            background: #222;
+            margin: 20px;
+        }
+
+        button{
+            padding: 20px ;
+            height: 100px;
+            width: 100px;
+            border-radius: 50px;
+            font-weight: 600;
+            background: #222;
+            color: white;
+            border: 3px white solid;
+            cursor: pointer;
+        }
+
+        p{
+            margin-top: 10px;
+            color: white;
+        }
+
+        .result-paragraph{
+            font-size: 1.5em;
+        }
+    </style>
+</head>  
+<body>
+ 
+        <button class="js-button-rock">Rock</button>
+     <button  class="js-button-paper">Paper</button>
+     <button class="js-button">Scissors</button>
+     <p class="js-moves js-moves-image"></p>
+
+     <p class="js-result result-paragraph"></p>
+    <p class="js-score js-score-input ">
+    </p>
+    
+    <script src="js/rock.paper.scissors.js">
+</script>
+
+
+</body>
+</html>

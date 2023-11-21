@@ -1,0 +1,66 @@
+.container {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(rgb(0, 101, 208), rgb(135, 176, 222));
+    height: 80vh;
+    width: 80vw;
+    margin-bottom: 80px;
+    position: relative;
+    border-radius: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: -2px -3px 10px rgb(178, 203, 230), 2px 3px 10px rgb(143, 170, 200);
+}
+
+.container .di-image img {
+    width: 40vw;
+    height: 80vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 30px;
+    border-radius: 2rem 0 0 2rem;
+}
+
+.container .sub-container p {
+    position: absolute;
+    top: 10px;
+    color: white;
+    text-align: center;
+    font-size: 2vw; /* Adjust the font size as a percentage of the viewport width */
+    line-height: 8vh; /* Adjust the line height as a percentage of the viewport height */
+    margin: 2vw; /* Adjust the margin as a percentage of the viewport width */
+    text-shadow: 1px 2px 9px #222;
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 60px;
+        height: 80vh;
+        width: 80vw;
+        position: relative;
+        border-radius: 2rem;
+    }
+
+    .container .di-image img {
+        width: 80vw;
+        height: 40vh;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        border-radius: 2rem 2rem 0rem 0rem;
+    }
+
+    .container .sub-container p {
+        position: absolute;
+        top: 40vh; /* Adjust the top position as a percentage of the viewport height */
+        left: 0;
+        color: #fff;
+        line-height: 4vh;
+        padding: 3vw; /* Adjust the padding as a percentage of the viewport width */
+        text-align: center;
+        font-size: 4vw; /* Adjust the font size as a percentage of the viewport width */
+    }
+}

@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    min-height :200vh;
+    background-image: url(../images/pexels-rostislav-uzunov-10458835.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+
+li a{
+    text-decoration: none;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ i {
+    font-size: 2em; 
+    margin: 5px; 
+    margin-top: 30px;
+    color: black;
+}
+
+i:hover{
+    color: rgb(0, 217, 255);
+    font-size: 2.08em;
+}
+.fa-brands.fa-whatsapp:hover{
+    color: #08ec85;
+    font-size: 2.08em;
+}
+.fa-brands.fa-instagram:hover{
+    color: #ff04cdb6;
+}
+
+.card{
+    position: relative;
+    width: 400px;
+    height:400px;
+    display: flex;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    margin-top: 3%;
+}
+
+.card:hover{
+    width: 60%;
+    transition: 0.5s;
+}
+
+.card .circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .circle .logo{
+    position: relative;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    margin-top: 2%;
+    display: none;
+}
+
+.card:hover .circle .logo{
+    transform: scale(0);
+    transition-delay: 0s;
+}
+
+.card .content {
+    position: absolute;
+    width: 50%;
+    left: 20%;
+    padding: 20px;
+    opacity: 0;
+    transition: 1s;
+    visibility: hidden;
+}
+
+    .card:hover .content{
+        transition-delay: 0.5s;
+        opacity: 1;
+        visibility: visible;
+        left: 20px;
+
+    }
+
+    .card .content p{
+        color: #fff
+    }
+
+    .card .content a{
+      color: white;
+      text-decoration: none;
+    }
+
+    .content a:hover{
+        text-decoration: underline;
+    }
+
+    .card .content form{
+        position:relative;
+        width: 400px;
+        padding: 10px;
+        text-align: center;
+        border: 1px solid rgb(125, 45, 204);
+        box-sizing: border-box;
+        backdrop-filter: blur(5px);
+    }
+    
+    .card .content form h1{
+        letter-spacing: 1px;
+        word-spacing: 3px;
+    }
+    
+    .card .content input{
+        margin: 10px;
+        width: 300px;
+        height: 40px;
+        padding: 7px;
+        font-size: 1.3em;
+    }
+
+    .card .content button{
+        padding: 10px 20px;
+        border-radius: 3px;
+        background-color: #060621;
+        color: white;
+        font-size: 1.3em;
+        cursor: pointer;
+        border: 1px solid #060621;
+    }
+
+    .content button:hover{
+        background-color:  rgb(178, 214, 246);
+        color: #060621;
+    }
+
+    .card .content form .text{
+        color: white;
+    }
+
+
+    
