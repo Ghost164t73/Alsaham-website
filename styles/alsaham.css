@@ -91,8 +91,6 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    z-index: 0;
-    font-weight: 600;
     font-family: sans-serif;
 }
 
@@ -212,12 +210,11 @@ nav ul a {
 .container1{
     display: flex;
     justify-content: center;
-    align-items: center;
     overflow: hidden;
     position: relative;
     margin-bottom: 100px;
     height:90vh;
-    background: transparent;
+    background: linear-gradient(to left, rgb(230, 240, 246), rgb(5, 114, 182));
     margin-top: 40px;
 }
 
@@ -230,16 +227,20 @@ nav ul a {
     border: white;
 }
 
-.container1 .para1 p {
-    font-weight: bold;
-    width: 40vw;
-    height: 40%;
+.container1 .para1{
     position: absolute;
+    top: 5vh;
+    left: 0;
+    width: 50vw;
+}
+
+.container1 .para1 p {
+    position: absolute;
+    top: 5vh;
     text-align: left;
-    top: 10%; /* Adjust the top position as a percentage of the parent container's height */
-    left: 5%; /* Adjust the right position as a percentage of the parent container's width */
-    font-size: 2vw; /* Adjust the font size as a percentage of the viewport width */
-    line-height: 8vh; /* Adjust the line height as a percentage of the viewport height */
+    font-size: 2vw; 
+    line-height: 8vh; 
+    margin: 2vw; 
 }
 
 
@@ -294,6 +295,10 @@ nav ul a {
 }
 
 @media screen and (max-width: 1009px) {
+
+    *{
+        transition: 0;
+    }
     nav ul li {
         visibility: hidden;
     }
@@ -305,7 +310,7 @@ nav ul a {
 
     .fa-solid,
     .fa-bounce {
-        display: inline-block;
+        display: block;
         height: 100px;
         font-size: 2em;
         animation-duration: 1s;
@@ -324,11 +329,40 @@ nav ul a {
         left: 40px;
     }
 
-    .container .para p{
-     justify-content: center;
+.container1{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 90vh;
+    background-color: blue;
+    position: relative;
     }
 
+    .container1 .image1{
+        top: 0;
+        height: 45vh;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .container1 .para1{
+        width: 100vw;
+        margin-right: 40px;
+      }
     
+    .container1 .para1 p{
+        position: absolute;
+        top: 40vh; 
+        left: 0;
+        color: #fff;
+        line-height: 6vw;
+        padding: 3vw; 
+        margin-bottom: 10vh;
+        text-align: left;
+        margin-bottom: 50px;
+        font-size: 4vh; 
+}
+
     .container{
         display: flex;
         justify-content: center;
