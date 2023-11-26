@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+.header1{
+    display: none;
+}
+
 html::-webkit-scrollbar{
     width: 1rem;
 }
@@ -45,19 +49,6 @@ body {
     box-sizing: border-box;
 }
 
-.header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.4),
-        rgba(0, 0, 0, 0)
-    );
-}
 
 .sticky-header {
     background-color: rgb(0, 127, 245);
@@ -208,9 +199,7 @@ nav ul a {
 }
   
 .container1{
-    display: flex;
     justify-content: center;
-    overflow: hidden;
     position: relative;
     margin-bottom: 100px;
     height:90vh;
@@ -253,8 +242,7 @@ nav ul a {
     border: none;
 }
 
-.container .para1 p em{
-    color: rgb(0, 127, 245);
+.container1 .para1 p em{
     font-size: 2.4rem;
     margin: 10px;
     font-style: normal;
@@ -294,7 +282,7 @@ nav ul a {
     height: 500px;
 }
 
-@media screen and (max-width: 1009px) {
+@media screen and (max-width: 609px) {
 
     *{
         transition: 0;
@@ -306,6 +294,15 @@ nav ul a {
     body {
         min-height: 200vh;
         overflow-x: hidden;
+    }
+
+    nav img{
+        display: flex;
+        border-color: black;
+    }
+
+    .header{
+        display: none;
     }
 
     .fa-solid,
@@ -333,21 +330,28 @@ nav ul a {
     justify-content: center;
     align-items: center;
     display: flex;
-    height: 90vh;
-    background-color: blue;
     position: relative;
+    height: 90vh;
+    background: rgb(0, 101, 208);
+    box-shadow: 3px  4px 9px rgb(55, 158, 210, 0.9) , -3px -3px 20px rgba(55, 158, 210, 0.9); 
+    margin: 10px;
     }
 
     .container1 .image1{
-        top: 0;
+        position: absolute;
+        top: -100px;
+        left: 16vw;
+        border-radius: 3vh;
+        justify-content: center;
+        justify-self: center;
+        align-items: center;
         height: 45vh;
-        width: 100%;
+        width: 80%;
         object-fit: cover;
       }
 
       .container1 .para1{
         width: 100vw;
-        margin-right: 40px;
       }
     
     .container1 .para1 p{
@@ -357,10 +361,8 @@ nav ul a {
         color: #fff;
         line-height: 6vw;
         padding: 3vw; 
-        margin-bottom: 10vh;
         text-align: left;
-        margin-bottom: 50px;
-        font-size: 4vh; 
+        font-size: 4vw; 
 }
 
     .container{
@@ -394,6 +396,26 @@ nav ul a {
         font-size: 1.5rem;
     }
 
+    .last-container .sub-container button{
+        padding: 15px;
+        top: 20px;
+        left: 30px;
+    }
+
+    .header1 .fa-solid{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .header1 a{
+        position: absolute;
+        top: 25px;
+        left: 20px;
+        color: black;
+        font-size: 2rem;
+        text-decoration: none;
+    }
 }
 
 
