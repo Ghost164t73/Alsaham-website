@@ -389,7 +389,9 @@ h1{
         left: 30px;
     }
 
- 
+    .sub-container{
+        display: block;
+    }
 
 }
 
