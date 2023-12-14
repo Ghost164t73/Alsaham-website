@@ -51,9 +51,17 @@ function fadeInOnScroll() {
   
 window.addEventListener('scroll', fadeInOnScroll);
 
-const cart = [];
 
-const subContainer = document.querySelector('.message-container .sub-container');
 
-console.log(subContainer)
-
+menuBtn.addEventListener('click', () => {
+    const sidebarWidth = sidebar.offsetWidth;
+    if (sidebar.style.left === '0px') {
+        sidebar.style.left = `-${sidebarWidth}px`;
+        content.style.marginLeft = '0';
+        menuBtn.innerHTML = '&#9776;';
+    } else {
+        sidebar.style.left = '0';
+        content.style.marginLeft = `${sidebarWidth}px`;
+        menuBtn.innerHTML = '&#10006;';
+    }
+});
