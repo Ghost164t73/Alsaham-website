@@ -355,6 +355,7 @@ nav ul li:last-child{
     transition: left 0.3s ease;
     display: flex;
     flex-direction: column;
+    z-index: 2000;
     align-items: center;
     padding-top: 20px;
 }
@@ -377,7 +378,6 @@ nav ul li:last-child{
     right: 20px;
     top: 20px;
     cursor: pointer;
-    z-index: 2;
     font-weight: 600;
     font-size: 24px;
     color: black;
