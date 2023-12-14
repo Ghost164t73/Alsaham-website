@@ -5,7 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
-    transition: linear .25s;
+    transition: linear .2s;
 }
 .header1{
     display: none;
@@ -25,10 +25,11 @@ html::-webkit-scrollbar-thumb{
 }
 
 body {
-    min-height: 300vh; 
+    min-height:400vh; 
     background: hsl(230, 100%, 98%);
     font-family: "syne" , sans-serif;
 }
+
 .fade-in{
     opacity: 0;
     transform: translateY(30px);
@@ -43,14 +44,33 @@ body {
 
 .header {
     height: 5.5rem;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    padding: 15px;
     width: 100vw;
+    z-index: 1000;
+    overflow: hidden;
     background: hsl(230, 100%, 98%);
     box-shadow: 0 2px 16px hsla(230, 75%, 32%, .15);
-    box-sizing: border-box;
 }
+
+.sticky-header{
+    position: fixed;
+    z-index: 1000;
+    box-shadow: 2px 2px 16px hsla(230, 75%, 32%, .15);
+}
+
+nav ul li a{
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+nav ul li a:hover,
+nav ul li a:focus{
+    color: #028cdc;
+    transition: color 0.5s ease;
+}
+
 
 .header-img{
     width: 100vw;
@@ -71,15 +91,15 @@ body {
 .text p{
     position: absolute;
     top: 30vh;
+    line-height: 1.5;
 }
 
 .text p em{
     color: #0796E7;
-    margin: 20px;
+    margin: 10px;
     font-style: normal;
 }
 
-/* Your existing styles... */
 
 .text p button {
     background: #028cdc;
@@ -89,7 +109,6 @@ body {
     border-radius: 50px;
     padding: 3vh 12vh;
     cursor: pointer;
-    margin-top: 30px;
     transition: background 0.5s ease, color 0.5s ease, transform 0.5s ease;
 }
 
@@ -147,6 +166,7 @@ nav ul li:last-child{
     position: absolute;
     top: 35px;
     visibility: hidden;
+    font-weight: 600;
     right: 20px;
     margin-left: 30px;
     cursor: pointer;
@@ -162,17 +182,7 @@ nav ul li:last-child{
     transition: color .4s;
 }
 
-nav ul li a {
-    color: black;
-    text-decoration: none;
-    font-family: sans-serif;
-}
 
-nav ul li a:hover,
-nav ul li a:focus{
-    color: #028cdc;
-    transition: color 0.5s ease;
-}
 
 @media screen and (max-width: 1023px){
     .header .ri-menu-line{
@@ -189,109 +199,56 @@ nav ul li a:focus{
     }
 }
 
-.fa-solid {
-    display: none;
-    cursor: pointer;
-}
-
-.fa-solid:hover{
-    opacity: 0.8;
-}
-
-.fa-xmark{
-    visibility: hidden;
-}
-
-nav ul a {
-    color: black;
-}
-
-.last-container{
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    background-color: #222;
-    position: relative;
-}
-
-.last-container .sub-container button{
-    padding: 20px 50px;
-    border: none;
-    border-radius: 30px;
-    position: absolute;
-    top: 40px;
-    left: 50px;
-    cursor: pointer;
-    color: #ffff;
-    background: rgb(0, 101, 208);
-    text-transform: uppercase;
-}
-
-.last-container .sub-container button:hover{
-    background: #fff;
-    color: rgb(0, 101, 208);
-}
-
-.last-container img{
-    position: absolute;
-    top: 100px;
-    right: 30px;
-    width: 500px;
-    height: 500px;
-}
-
-
-h1{
+.blog-heading{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 20vh;
     font-size: 6vh;
-}
-
-.blog{
-    position: relative;
-    z-index:auto;
-    width: 80vw;
-    height: 80vh;
-    margin: auto;
-}
-
-.blog img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 40vw;
-    height: 60vh;
-    object-fit: cover;
-    padding: 1vw;
+    top: 115%;
+    left: 48%;
 }
 
 .blog h1{
-    position: absolute;
-    top: 10vh;
-    right: 20vw;
-    font-size: 2.5vw;
-    letter-spacing: 3px;
-    color: #028cdc;
+ font-size: 2rem;
+ padding-bottom: 10px;
+ font-weight: 600;
+ color: #028cdc;
 }
 
-.blog p{
-    width: 30vw;
-    max-height: 50vh;
-    position: absolute;
-    top: 25vh;
-    line-height: 4vh;
-    right: 5vw;
-    color: black;
-    letter-spacing: 2px;
-    text-align: left;
-    font-size: 1.5vw;
+.blog{
+    display: flex;
+    gap: 12rem;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 50px;
+}
+
+.blog img{
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.move-blog-image{
+    transform: scale(1.12);
 }
 
 .blog p em{
     font-style: normal;
     color: #0796E7;
+}
+
+.blog div{
+    margin-bottom: 40px;
+    padding: 2px;
+
+}
+
+.blog p{
+    font-size: 1.4em;
+    width: 30vw;
 }
 
 .line-div {
@@ -301,10 +258,9 @@ h1{
 }
 
 .line{
-    width: 70vw;
+    width: 60vw;
     height: 0.3vh;
-    background: #b1daf3;
-    border-radius: 50px;
+    background: #3ea2e1;
 }
 
 .line:hover{
@@ -321,18 +277,72 @@ h1{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+
+.full-container{
+    transform: scale(1.2);
+    background-color: #f0f0f0;
+    padding: 20px;
+    justify-content: space-between;
+    display: flex;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: .4s linear;
+}
+
 .sub-container {
     background-color: #fff;
     border: 1px solid #ddd;
-    padding: 20px;
+    padding: 30px;
     cursor: pointer;
     margin: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out
+    transition: transform 0.3s ease-in-out;
 }
 
 .sub-container:hover {
     transform: scale(1.1);
+}
+
+.sub-container a{
+    background: linear-gradient(to top, #028cdc , #b1daf3);
+    padding: 5px 30px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    margin-top: 50px;
+}
+
+.sub-container a:hover{
+    background: white;
+    color: #028cdc;
+    border: 1px solid #028cdc;
+    transform: scale(1.1);
+}
+
+.heading{
+    height: 100%;
+    width: 100%;
+    margin: 50px;
+    overflow: hidden;
+    align-items: left;
+    justify-content: left;
+}
+
+.message-container{
+    width: 100%;
+    padding: 20px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.message-container .sub-container:hover{
+    transform: translateY(-20px);
+}
+
+.last-container{
+    height: 100vh;
+    width: 100%;
+    background: #028cdc;
 }
 
 
@@ -348,7 +358,6 @@ h1{
 
     .header{
         display: block;
-        background: transparent;
     } 
 
     nav a{
@@ -383,15 +392,25 @@ h1{
         text-align: center;
     }
 
-    .last-container .sub-container button{
-        padding: 15px;
-        top: 20px;
-        left: 30px;
+    .container,
+    .message-container{
+        display: block;
+        margin: 0;
+        width: 100%;
     }
 
-    .container{
-        display: block;
+    .blog{
+        flex-direction: column;
+        gap: 1rem;
+        align-items: left;
     }
+
+    .blog p{
+        width: 100%;
+    }
+    
+
+
 
 }
 
@@ -413,4 +432,11 @@ h1{
       to {opacity: 1;}
   }
   
-  
+  @keyframes bounce{
+    from{
+      transform:translate3d(0,0,0);
+    }
+    to{
+      transform:translate3d(0 ,200px ,0)
+    }
+  }
