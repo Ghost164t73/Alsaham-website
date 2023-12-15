@@ -79,14 +79,19 @@ nav ul li a:focus{
 
 .header-img{
     width: 100vw;
-    height: 90vh;
+    height: 700px;
     object-fit: cover;
+    position: relative;
 }
 
 .text{
-    font-size: 8vh;
+    position: absolute;
+    top: 200px;
+    left: 50px;
+    font-size: 3em;
     display: flex;
     justify-content: left;
+    z-index: 1000;
     align-items: center;
     color: #ffffff;
     margin: 5vh;
@@ -94,8 +99,6 @@ nav ul li a:focus{
 }
 
 .text p{
-    position: absolute;
-    top: 30vh;
     line-height: 1.5;
 }
 
@@ -355,30 +358,19 @@ nav ul li:last-child{
     flex-direction: column;
     z-index: 2000;
     align-items: center;
-    padding-top: 20px;
 }
 
 #sidebar a {
     text-decoration: none;
-    color: #fff;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 5px;
+    color: #fffffff8;
+    width: 100%;
+    padding: 15px;
+    border-bottom: 1px solid #545252;
     transition: background-color 0.3s ease;
 }
 
 #sidebar a:hover {
     background-color: #555;
-}
-
-#menu-btn {
-    position: fixed;
-    right: 20px;
-    top: 20px;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 24px;
-    color: black;
 }
 
 #content {
@@ -421,14 +413,13 @@ nav ul li:last-child{
     }
 
     .text {
-        height: 100vh;
         justify-content: center;
-        display: flex;
         align-items: center;
     }
 
     .text p{
-        position: absolute;
+        top: 0;
+        left: 0;
         color: white;
         margin: 50px;
         font-size: 0.9em;
@@ -455,15 +446,22 @@ nav ul li:last-child{
         margin: 5px;
     }
 
+    .blog div h1{
+        padding: 8px;
+    }
+
     .blog div p{
         width: 100%;
         padding: 8px;
         margin-bottom: 40px ;
+        font-size: 1.3em;
     }
 
     .blog img{
         margin: 0;
+        padding: 10px;
         width: 100%;
+        height: 30vh;
     }
     
     #content{
