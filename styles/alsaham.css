@@ -83,49 +83,6 @@ nav ul li a:focus{
     object-fit: cover;
 }
 
-.text{
-    position: absolute;
-    top: 18vh;
-    left: 0;
-    display: flex;
-    justify-content: left;
-    z-index: 1000;
-    align-items: center;
-    color: #ffffff;
-    margin: 5vh;
-    font-weight: 600;
-}
-
-.text p{
-    line-height: 1.5;
-    font-size: 5vw;
-}
-
-.text p em{
-    color: #0796E7;
-    margin: 10px;
-    font-style: normal;
-}
-
-
-.text p button {
-    background: #028cdc;
-    color: rgb(236, 236, 236);
-    border: none;
-    font-size: 1.5em;
-    border-radius: 50px;
-    padding: 3vh 15vh;
-    cursor: pointer;
-    transition: background 0.5s ease, color 0.5s ease, transform 0.5s ease;
-}
-
-.text p button:hover {
-    background: #fff;
-    color: #028cdc;
-    transform: translateX(20px); 
-}
-
-
 nav{
     justify-content: space-between;
 }
@@ -395,19 +352,22 @@ nav ul li:last-child{
 
 a .ri-facebook-circle-fill:hover{
     color: #036aa6;
+    transition: color .5s ease-in;
 }
 
 a .ri-instagram-line:hover{
     color: rgb(252, 29, 252);
-    transform: translateY(-50px);
+    transition: color .5s ease-in;
 }
 
 a .ri-linkedin-fill:hover{
     color: #111;
+    transition: color .5s ease-in;
 }
 
 a .ri-twitter-fill:hover{
     transform: translateY(-50px);
+    transition: color .5s ease-in;
 }
 
 
@@ -440,27 +400,6 @@ a .ri-twitter-fill:hover{
         display: block;
         top: 15px;
         left: 20px;
-    }
-
-    .text {
-        position: absolute;
-        left: -70px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .text p{
-        color: white;
-        margin: 50px;
-        font-size: 7vh;
-        line-height: 1.1;
-        text-align: center;
-    }
-
-    .text p button{
-        font-size: 0.4em;
-        padding: 15px 50px;
     }
 
     .container,
