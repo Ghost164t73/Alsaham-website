@@ -79,16 +79,14 @@ nav ul li a:focus{
 
 .header-img{
     width: 100vw;
-    height: 700px;
+    height: 80vh;
     object-fit: cover;
-    position: relative;
 }
 
 .text{
     position: absolute;
-    top: 200px;
-    left: 50px;
-    font-size: 3em;
+    top: 18vh;
+    left: 0;
     display: flex;
     justify-content: left;
     z-index: 1000;
@@ -100,6 +98,7 @@ nav ul li a:focus{
 
 .text p{
     line-height: 1.5;
+    font-size: 5vw;
 }
 
 .text p em{
@@ -113,9 +112,9 @@ nav ul li a:focus{
     background: #028cdc;
     color: rgb(236, 236, 236);
     border: none;
-    font-size: 0.5em;
+    font-size: 1.5em;
     border-radius: 50px;
-    padding: 3vh 12vh;
+    padding: 3vh 15vh;
     cursor: pointer;
     transition: background 0.5s ease, color 0.5s ease, transform 0.5s ease;
 }
@@ -343,7 +342,7 @@ nav ul li:last-child{
 .last-container{
     height: 100vh;
     width: 100%;
-    background: #028cdc;
+    background: rgba(2, 140, 220,0.7);
 }
 
 #sidebar {
@@ -381,6 +380,37 @@ nav ul li:last-child{
 }
 
 
+.icons{
+    display: flex;
+    gap: 3rem;
+    font-size:  2em;
+    cursor: pointer;
+    margin: 30px;
+}
+
+.icons a{
+    color: white;
+    text-decoration: none;
+}
+
+a .ri-facebook-circle-fill:hover{
+    color: #036aa6;
+}
+
+a .ri-instagram-line:hover{
+    color: rgb(252, 29, 252);
+    transform: translateY(-50px);
+}
+
+a .ri-linkedin-fill:hover{
+    color: #111;
+}
+
+a .ri-twitter-fill:hover{
+    transform: translateY(-50px);
+}
+
+
 @media screen and (max-width: 1024px) {
 
     *{
@@ -413,17 +443,24 @@ nav ul li:last-child{
     }
 
     .text {
+        position: absolute;
+        left: -70px;
+        display: flex;
         justify-content: center;
         align-items: center;
     }
 
     .text p{
-        top: 0;
-        left: 0;
         color: white;
         margin: 50px;
-        font-size: 0.9em;
+        font-size: 7vh;
+        line-height: 1.1;
         text-align: center;
+    }
+
+    .text p button{
+        font-size: 0.4em;
+        padding: 15px 50px;
     }
 
     .container,
@@ -459,9 +496,9 @@ nav ul li:last-child{
 
     .blog img{
         margin: 0;
+        height: 50vh;
         padding: 10px;
         width: 100%;
-        height: 30vh;
     }
     
     #content{
