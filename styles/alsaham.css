@@ -7,6 +7,10 @@
     overflow-x: hidden;
     transition: linear .2s;
 }
+
+*:focus{
+    outline: none;
+}
 .header1{
     display: none;
 }
@@ -56,6 +60,7 @@ body {
     position: fixed;
     z-index: 1000;
     box-shadow: 2px 2px 16px hsla(230, 75%, 32%, .15);
+    transition: top 0.3s; 
 }
 
 nav ul li a{
@@ -176,13 +181,6 @@ nav ul li:last-child{
 .header .ri-user-line{
     visibility: visible;
 }
-
-.header i:hover{
-    color: #028cdc;
-    transition: color .4s;
-}
-
-
 
 @media screen and (max-width: 1023px){
     .header .ri-menu-line{
@@ -322,7 +320,7 @@ nav ul li:last-child{
 .heading{
     height: 100%;
     width: 100%;
-    margin: 50px;
+    margin: 50px 0 50px 0;
     overflow: hidden;
     align-items: left;
     justify-content: left;
@@ -347,11 +345,11 @@ nav ul li:last-child{
 
 #sidebar {
     height: 100vh;
-    width: 200px;
+    width: 300px;
     background-color: #333;
     position: fixed;
     top: 0;
-    left: -200px;
+    left: -300px;
     transition: left 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -447,10 +445,24 @@ nav ul li:last-child{
     .blog{
         flex-direction: column;
         gap: 1rem;
+        width: 100%;
+        margin: 0;
         align-items: left;
     }
 
-    .blog p{
+    .blog div{
+        width: 100%;
+        margin: 5px;
+    }
+
+    .blog div p{
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 40px ;
+    }
+
+    .blog img{
+        margin: 0;
         width: 100%;
     }
     
