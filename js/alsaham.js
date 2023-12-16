@@ -60,10 +60,8 @@ menuBtn.addEventListener('click', () => {
     if (sidebar.style.left === '0px') {
         sidebar.style.left = `-${sidebarWidth}px`;
       content.style.marginLeft = '0';
-      menuBtn.innerHTML = '<i class="nav__menu"><i>'
     } else {
         sidebar.style.left = '0';
       content.style.marginLeft = `${sidebarWidth}px`;
-      menuBtn.innerHTML = '<i class="ri-close-line"></i>'
   }
 });
