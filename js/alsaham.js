@@ -8,24 +8,23 @@ function stickyHeader() {
 
   if (screenPosition > 100) {
     header.classList.add('sticky-header')    
-  }
-  else {
+  }else {
     header.classList.remove('sticky-header')
   }
 
-  if (screenPosition >= 1300 && screenPosition < 1800) {
+  if (screenPosition >= 2100 && screenPosition < 2700) {
     container.classList.add('full-container')
-  } else {
+     } else {
     container.classList.remove('full-container')
   }
 
-  if (screenPosition > 300 && screenPosition < 700) {
+  if (screenPosition > 1300 && screenPosition < 1700) {
     image.classList.add('move-blog-image');
   } else {
     image.classList.remove('move-blog-image')
   }
   
-  if (screenPosition > 700 && screenPosition <= 1300) {
+  if (screenPosition > 1700 && screenPosition <= 2100) {
     image2.classList.add('move-blog-image')
   } else {
     image2.classList.remove('move-blog-image')    
@@ -51,11 +50,6 @@ function fadeInOnScroll() {
   
 window.addEventListener('scroll', fadeInOnScroll);
 
-const cart = [];
-
-const subContainer = document.querySelector('.message-container .sub-container');
-
-console.log(subContainer)
 
 const sidebar = document.getElementById('sidebar');
 const content = document.getElementById('content');
@@ -65,9 +59,11 @@ menuBtn.addEventListener('click', () => {
     const sidebarWidth = sidebar.offsetWidth;
     if (sidebar.style.left === '0px') {
         sidebar.style.left = `-${sidebarWidth}px`;
-        content.style.marginLeft = '0';
+      content.style.marginLeft = '0';
+      menuBtn.innerHTML = '<i class="nav__menu"><i>'
     } else {
         sidebar.style.left = '0';
-        content.style.marginLeft = `${sidebarWidth}px`;
-    }
+      content.style.marginLeft = `${sidebarWidth}px`;
+      menuBtn.innerHTML = '<i class="ri-close-line"></i>'
+  }
 });
