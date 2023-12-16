@@ -1,60 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Customer Feedback</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium quality</title>
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-      text-align: center;
+    .our-commitment{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 50px auto;
+      gap: 2rem;
     }
 
-    h1 {
-      color: #333;
+    .our-commitment p{
+      padding: 100px;
+      padding-top: 0;
+      font-size: 1.5em;
+      width: 70%;
+      line-height: 1.5
     }
 
-    #feedback-container {
-      background-color: #fff;
-      border: 1px solid #ccc;
-      padding: 20px;
-      margin: 20px;
-      border-radius: 5px;
-    }
-
-    p {
-      margin: 0;
-      padding: 5px;
+    @media  screen and (max-width: 1000px) {
+      .our-commitment{
+        margin: 0;
+      }
+      .our-commitment p {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+      }
     }
   </style>
+
+  <link rel="stylesheet" href="styles/alsaham.css">
 </head>
 <body>
-  <h1>Customer Feedback</h1>
-  <div id="feedback-container"></div>
+  
+ <div class="header">
+  <nav>
+      <img src="images/image.png" alt="">
+      <div>Alsaham</div>
+      <ul class="ul">
+          <li><a href="alsaham.html" class="">HOME</a></li>
+          <li><a href="Alsahamabout.html" class="">ABOUT</a></li>
+          <li><a href="our board.html" class="">OUR BOARD</a></li>
+          <li><a href="alsaham-contact.html" class="">CONTACT</a></li>
 
-  <script>
-    const feedbacks = [];
+      </ul>
+  </nav>
 
-    while (true) {
-      const feedback = prompt("Please enter your feedback (or type 'exit' to quit):");
+  <i class="ri-user-line nav__login" id="login-btn"></i>
 
-      if (feedback === null) {
-        break;
-      }
+  <div id="content">
+      <i class="ri-menu-line nav__menu" id = "login-btn"></i>
+  </div>
+</div>
 
-      feedbacks.push(feedback);
-    }
+<div class="our-commitment">
+    <h1>PREMIUM QUALITY</h1>
+    <p>
+Indulge in the epitome of luxury and excellence with our premium quality offerings. Crafted with meticulous attention to detail, our products redefine the standards of sophistication and elevate your experiences to new heights.
+At the core of our commitment to premium quality is an unwavering dedication to sourcing the finest materials. From exquisite fabrics to high-grade metals, each element is carefully selected to ensure unparalleled durability, elegance, and a touch of opulence.
+Immerse yourself in the artistry of our premium quality creations, where every stitch, every curve, and every detail reflects a passion for perfection. Our artisans, masters of their craft, bring timeless expertise to each product, creating pieces that transcend trends and stand the test of time.
+Discover a world of refined taste and unmatched performance as you engage with our premium quality offerings. Whether it's a sleek technological device, a luxurious accessory, or a gourmet delight, our commitment to excellence guarantees an experience that is nothing short of extraordinary.
+Our pursuit of premium quality extends beyond mere aesthetics – it encompasses functionality, innovation, and the promise of an elevated lifestyle. Each product is a testament to our unwavering commitment to providing you with the very best, enriching your life with sophistication and unparalleled quality.
+Step into a realm where luxury meets purpose, where every touchpoint resonates with the essence of premium quality. Elevate your standards and make a statement of discerning taste with our exclusive range of meticulously crafted, premium offerings. Because when it comes to quality, nothing less than extraordinary will do.
 
-    const feedbackContainer = document.getElementById("feedback-container");
 
-    if (feedbacks.length === 0) {
-      feedbackContainer.innerHTML = "<p>No feedback received.</p>";
-    } else {
-      feedbackContainer.innerHTML = "<h2>Thank you for the feedback. Here are the reviews received:</h2>";
-      feedbacks.forEach((review, index) => {
-        feedbackContainer.innerHTML += `<p>Review ${index + 1}: ${review}</p>`;
-      });
-    }
-  </script>
+    </p>
+</div>
+  <script src="js/alsaham.js"></script>
 </body>
 </html>
