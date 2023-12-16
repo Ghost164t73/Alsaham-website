@@ -29,7 +29,6 @@ html::-webkit-scrollbar-thumb{
 }
 
 body {
-    min-height:400vh; 
     background: hsl(230, 100%, 98%);
     font-family: "syne" , sans-serif;
 }
@@ -53,14 +52,13 @@ body {
     z-index: 1000;
     overflow: hidden;
     background: hsl(230, 100%, 98%);
-    box-shadow: 0 2px 16px hsla(230, 75%, 32%, .15);
 }
 
 .sticky-header{
     position: fixed;
     z-index: 1000;
     box-shadow: 2px 2px 16px hsla(230, 75%, 32%, .15);
-    transition: top 0.3s; 
+    transition: top 0.3s ease; 
 }
 
 nav ul li a{
@@ -76,10 +74,12 @@ nav ul li a:focus{
     transition: color 0.5s ease;
 }
 
-
 .header-img{
     width: 100vw;
-    height: 80vh;
+    height: 800px;
+    padding: 20px;
+    padding-top: 10px;
+    border-radius: 50px;
     object-fit: cover;
 }
 
@@ -338,7 +338,7 @@ nav ul li:last-child{
 
 
 .icons{
-    display: flex;
+    display: inline-flex;
     gap: 3rem;
     font-size:  2em;
     cursor: pointer;
@@ -361,13 +361,13 @@ a .ri-instagram-line:hover{
 }
 
 a .ri-linkedin-fill:hover{
-    color: #111;
+    color: #444;
     transition: color .5s ease-in;
 }
 
 a .ri-twitter-fill:hover{
-    transform: translateY(-50px);
-    transition: color .5s ease-in;
+    transform: scale(1.3);
+    transition: transform .5s ease-in;
 }
 
 
