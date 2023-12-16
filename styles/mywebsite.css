@@ -1,92 +1,42 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family:  sans-serif;
-}
-
-body{
-    min-height :200vh;
-}
-
-nav .logo:hover{
-    text-decoration: none;
-    background-color: transparent;
-    color: white;
-}
-
-nav ul{
+.new-input{
     display: flex;
-    list-style: none;
-    position: absolute;
-    top: 20px;
-    left: 30%;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin:  auto;
+    padding: 50px;
 }
 
-nav ul li{
-    margin-left: 50px;
-}
-
-nav a{
-    text-decoration: none;
-    color: white;
-    padding: 8px;
-    font-size: 0.59em;
-}
-
-nav a:hover{
-   background-color: white;
-   color: rgb(166, 17, 166);
-   border-radius: 10px;
-   font-size: 0.59em;
-}
-
-nav{
-    padding: 30px;
-}
-
-.img-link{
-    color: #111
-}
-
-.welcome{
-    margin-top: 30px;
-    margin-left: 100px;
-
-}
-
-p{
-    font-size: 2em;
-    margin: 20px;
-    margin-left: 100px;
+.first-paragraph{
+    max-width: 900px;
+    font-size: 1.2em;
     line-height: 50px;
-}
-
-.website-tour{
-    font-size: 2rem;
-    padding: 30px;
-    color: white;
 }
 
 
 .anime{
-    width: 20%;
-    height: auto;
-    float: right;
-    margin: 30px;
+    width: 500px;
     border-radius: 50px;
-    margin-right: 50px;
+    object-fit: cover;
+    padding: 20px;
+    height: 500px;
+}
+
+.slide-anime{
     animation-name: slideLeft;
     animation-duration: 1.2s;
 }
 
-.about-paragraph-first{
-    text-align: center;
-    display: block;
+.first-paragraph{
+    text-align: left;
     border-radius:20px;
-    width: calc(100% - 60%);
-    background-color: #060621;
-    padding: 20px;
+    width: 100%;
+    background: linear-gradient(to right,#027bed, #18beff);
+    padding: 40px;
     color: white;
+}
+
+.slide-first-paragraph{
     animation-name: slideLeft;
     animation-duration: 1.2s;
 }
@@ -108,11 +58,14 @@ p{
 }
 
 .box{
-    width: calc(100% - 30%);
+    width: 100%;
     height: auto;
-    margin: 10px;
+    margin: auto;
     font-size: 1em;
     border: 1px solid transparent;
+}
+
+.slide-box{
     animation-name: slideRight;
     animation-duration: 1.2s;
 }
@@ -121,16 +74,6 @@ p{
     display: inline-block;
 }
 
-.second-div{
-    padding: 10%;
-    margin: 30px;
-}
-
-.second-div h1{
-    color: white;
-    font-size: 3rem;
-    margin: none;
-}
 
 .start-button{
     padding: 20px;
@@ -157,15 +100,12 @@ p{
     display: block;
 }
 
-em{
-    color: rgb(199, 10, 199);
-    font-style: normal;
-    background-color: white;
-    padding: 10px;
-    border-radius: 10px;
-}
 
-@media screen and (max-width : 1000px){
+@media screen and (max-width : 1124px){
+
+    .new-input{
+        padding: 0;
+    }
     nav .logo{
         width: 120px;
         margin: 0;
@@ -187,7 +127,7 @@ em{
         margin: 0;
     }
 
-    .about-paragraph-first{
+    .first-paragraph{
         width: 100%;
         margin: 0;
         border-radius: 0;
