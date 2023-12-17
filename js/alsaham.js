@@ -4,9 +4,11 @@ function stickyHeader() {
   const container = document.querySelector('.container')
   const image = document.querySelector('.blog img')
   const image2 = document.querySelector('.blog .image');
+  const anime = document.querySelector('.anime')
+  const firstParagraph = document.querySelector('.first-paragraph')
   
 
-  if (screenPosition > 100) {
+  if (screenPosition > 50) {
     header.classList.add('sticky-header')    
   }else {
     header.classList.remove('sticky-header')
@@ -18,18 +20,17 @@ function stickyHeader() {
     container.classList.remove('full-container')
   }
 
-  if (screenPosition > 1300 && screenPosition < 1700) {
+  if (screenPosition > 1100 && screenPosition < 1700) {
     image.classList.add('move-blog-image');
-  } else {
-    image.classList.remove('move-blog-image')
-  }
-  
+  }  
   if (screenPosition > 1700 && screenPosition <= 2100) {
     image2.classList.add('move-blog-image')
-  } else {
-    image2.classList.remove('move-blog-image')    
   }
 
+  if (screenPosition > 250) {
+    anime.classList.add('slide-anime')
+    firstParagraph.classList.add('slide-first-paragraph')
+  }
 }
 
 window.addEventListener('scroll' , stickyHeader)
