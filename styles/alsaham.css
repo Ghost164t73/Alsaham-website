@@ -51,13 +51,13 @@ body {
     width: 100vw;
     z-index: 1000;
     overflow: hidden;
-    background: hsl(230, 100%, 98%);
+    background: hsla(230, 100%, 98%, 95%);
 }
 
 .sticky-header{
     position: fixed;
     z-index: 1000;
-    box-shadow: 2px 2px 16px hsla(230, 75%, 32%, .15);
+    border-bottom: 1px solid #dfdcdc;
     transition: top 0.3s ease; 
 }
 
@@ -77,8 +77,7 @@ nav ul li a:focus{
 .header-img{
     width: 100vw;
     height: 800px;
-    padding: 20px;
-    padding-top: 10px;
+    padding: 30px;
     border-radius: 50px;
     object-fit: cover;
 }
@@ -297,15 +296,47 @@ nav ul li:last-child{
 }
 
 .last-container{
-    height: 100vh;
     width: 100%;
-    background: rgba(2, 140, 220,0.7);
+    background: rgba(2, 140, 220);
+    padding: 70px;
+    justify-content: center;
+    display: flex;
+}
+
+.last-container .inner-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+legend{
+    color: white;
+}
+
+.first-class ul li{
+    padding-top: 30px;
+}
+
+.first-class ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+@media screen and (max-width: 600px){
+    .inner-container{
+    }
+
+    .last-container{
+        display: block;
+        padding: 10px;
+    }
 }
 
 #sidebar {
     height: 100vh;
     width: 300px;
-    background-color: #333;
+    background-color: #444;
     position: fixed;
     top: 0;
     left: -300px;
@@ -318,7 +349,7 @@ nav ul li:last-child{
 
 #sidebar a {
     text-decoration: none;
-    color: #fffffff8;
+    color: #fff;
     width: 100%;
     padding: 15px;
     border-bottom: 1px solid #545252;
@@ -327,6 +358,7 @@ nav ul li:last-child{
 
 #sidebar a:hover {
     background-color: #555;
+    color: white;
 }
 
 #content {
@@ -336,11 +368,11 @@ nav ul li:last-child{
     visibility: hidden;
 }
 
-
 .icons{
-    display: inline-flex;
-    gap: 3rem;
+    display: flex;
+    justify-content: space-between;
     font-size:  2em;
+    gap: 2rem;
     cursor: pointer;
     margin: 30px;
 }
@@ -361,7 +393,7 @@ a .ri-instagram-line:hover{
 }
 
 a .ri-linkedin-fill:hover{
-    color: #444;
+    color: #878585;
     transition: color .5s ease-in;
 }
 
@@ -404,7 +436,8 @@ a .ri-twitter-fill:hover{
 
     .header-img{
         padding: 10px;
-        height: 700px;
+        height: 600px;
+        border-radius: 25px;
     }
 
     .container,
