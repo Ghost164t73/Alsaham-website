@@ -1,37 +1,26 @@
 function stickyHeader() {
-  const header = document.querySelector('.header')
   const screenPosition = window.scrollY;
-  const container = document.querySelector('.container')
-  const image = document.querySelector('.blog img')
+  const header = document.querySelector('.header');
+  const container = document.querySelector('.container');
+  const image = document.querySelector('.blog img');
   const image2 = document.querySelector('.blog .image');
-  const anime = document.querySelector('.anime')
-  const firstParagraph = document.querySelector('.first-paragraph')
-  
+  const anime = document.querySelector('.anime');
+  const firstParagraph = document.querySelector('.first-paragraph');
 
-  if (screenPosition > 50) {
-    header.classList.add('sticky-header')    
-  }else {
-    header.classList.remove('sticky-header')
-  }
+  header.classList.toggle('sticky-header', screenPosition > 50);
+  container.classList.toggle('full-container', screenPosition >= 2100 && screenPosition < 2700);
+  image.classList.toggle('move-blog-image', screenPosition > 1100 && screenPosition <= 1700);
+  image2.classList.toggle('move-blog-image', screenPosition > 1700 && screenPosition <= 2100);
 
-  if (screenPosition >= 2100 && screenPosition < 2700) {
-    container.classList.add('full-container')
-     } else {
-    container.classList.remove('full-container')
-  }
-
-  if (screenPosition > 1100 && screenPosition < 1700) {
-    image.classList.add('move-blog-image');
-  }  
-  if (screenPosition > 1700 && screenPosition <= 2100) {
-    image2.classList.add('move-blog-image')
-  }
 
   if (screenPosition > 250) {
-    anime.classList.add('slide-anime')
-    firstParagraph.classList.add('slide-first-paragraph')
+    anime.classList.add('slide-anime');
+    firstParagraph.classList.add('slide-first-paragraph');
   }
 }
+
+window.addEventListener('scroll', stickyHeader);
+
 
 window.addEventListener('scroll' , stickyHeader)
 
@@ -66,3 +55,4 @@ menuBtn.addEventListener('click', () => {
       content.style.marginLeft = `${sidebarWidth}px`;
   }
 });
+
