@@ -23,22 +23,22 @@
 }
 
 .slide-anime{
-    animation-name: slideLeft;
-    animation-duration: 1.2s;
+    animation-name: slideRight;
+    animation-duration: 0.7s;
 }
 
 .first-paragraph{
     text-align: left;
     border-radius:20px;
     width: 100%;
-    background: linear-gradient(to right,#027bed, #18beff);
+    background: linear-gradient(#028cdc,#003f5e);
     padding: 40px;
     color: white;
 }
 
 .slide-first-paragraph{
     animation-name: slideLeft;
-    animation-duration: 1.2s;
+    animation-duration: 0.7s;
 }
 
 @keyframes slideLeft{
@@ -73,33 +73,6 @@
 .box .box-one{
     display: inline-block;
 }
-
-
-.start-button{
-    padding: 20px;
-    font-size: 2em;
-    width: 400px;
-    display: block;
-    height: auto;
-    border-radius: 50px;
-    border: none;
-    background-color: black;
-    margin-top: 40px;
-}
-.start-button a{
-    text-decoration: none;
-    color: white;
-}
-
-.start-button:hover{
-    background-color: white;
-}
-.start-button:hover a{
-    color: black;
-    font-style: italic;
-    display: block;
-}
-
 
 @media screen and (max-width : 1124px){
 
@@ -141,11 +114,10 @@
 
     .box{
         width: 100%;
-        margin: 0;
-        border:2px solid #060621;
         padding: 30px;
+        border-bottom: 1px solid #028cdc;
         font-size: 0.7em;
         background-color: white;
-        color: #060621;
+        color: #111;
     }
 }
