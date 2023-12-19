@@ -7,20 +7,17 @@ function stickyHeader() {
   const anime = document.querySelector('.anime');
   const firstParagraph = document.querySelector('.first-paragraph');
 
-  header.classList.toggle('sticky-header', screenPosition > 50);
+  header.classList.toggle('sticky-header', screenPosition > 2);
   container.classList.toggle('full-container', screenPosition >= 2100 && screenPosition < 2700);
-  image.classList.toggle('move-blog-image', screenPosition > 1100 && screenPosition <= 1700);
-  image2.classList.toggle('move-blog-image', screenPosition > 1700 && screenPosition <= 2100);
+ image.classList.toggle('move-blog-image', screenPosition > 1100 && screenPosition <= 1700);
+ image2.classList.toggle('move-blog-image', screenPosition > 1700 && screenPosition <= 2100);
 
-
+  
   if (screenPosition > 250) {
     anime.classList.add('slide-anime');
     firstParagraph.classList.add('slide-first-paragraph');
   }
 }
-
-window.addEventListener('scroll', stickyHeader);
-
 
 window.addEventListener('scroll' , stickyHeader)
 
