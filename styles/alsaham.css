@@ -305,8 +305,8 @@ legend{
 
 .nav_menu{
     position: absolute;
-    font-size: 2em;
-    top: 20px;
+    font-size: 1.5em;
+    top: 15px;
     z-index: 2000;
     right: 20px;
     color: black;
@@ -325,8 +325,9 @@ legend{
 }
 
 .sidebar{
-    position: absolute;
+    position: fixed;
     top: 0;
+    left: 0;
     z-index: 1009;
     width: 100%;
     align-items: center;
