@@ -31,25 +31,21 @@ function fadeInOnScroll() {
   
       if (elementPosition < screenHeight) {
         element.classList.add('fade-in-active'); 
-      } 
+      }
     });
   }
   
 window.addEventListener('scroll', fadeInOnScroll);
 
+const openButton = document.querySelector('.open-menu-button');
+const closeButton = document.querySelector('.close-menu-button');
+const sideBar = document.querySelector('.sidebar');
 
-const sidebar = document.getElementById('sidebar');
-const content = document.getElementById('content');
-const menuBtn = document.querySelector('.nav__menu');
 
-menuBtn.addEventListener('click', () => {
-    const sidebarWidth = sidebar.offsetWidth;
-    if (sidebar.style.left === '0px') {
-        sidebar.style.left = `-${sidebarWidth}px`;
-      content.style.marginLeft = '0';
-    } else {
-        sidebar.style.left = '0';
-      content.style.marginLeft = `${sidebarWidth}px`;
-  }
-});
+openButton.addEventListener('click', () => {
+  sideBar.classList.toggle('show-sidebar');
+})
 
+closeButton.addEventListener('click', () => {
+  sideBar.classList.remove('show-sidebar')
+})
