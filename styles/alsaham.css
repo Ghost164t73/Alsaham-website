@@ -345,9 +345,9 @@ legend{
 
 .sidebar .ri-close-circle-line{
     position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 3em;
+    top: 15px;
+    right: 15px;
+    font-size: 2em;
     cursor: pointer;
 }
 
