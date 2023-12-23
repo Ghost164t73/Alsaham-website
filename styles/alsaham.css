@@ -334,9 +334,9 @@ legend{
     justify-content: center;
     height: 100vh;
     background: white;
-    transform: translate(-100%);
+    transform: translate(200%);
     transform-origin: center;
-    transition: transform 0.5s ease-in;
+    transition: transform 0.3s ease-in;
 }
 
 .show-sidebar{
