@@ -30,7 +30,7 @@ html::-webkit-scrollbar-thumb{
 
 body {
     background: hsl(230, 100%, 98%);
-    font-family: "syne" , sans-serif;
+    font-family: sans-serif;
 }
 
 .header {
@@ -53,7 +53,8 @@ body {
 nav ul li a{
     color: black;
     text-decoration: none;
-    font-weight: 590;
+    font-weight: 540;
+    font-size: 1.3em;
 }
 
 nav ul li a:hover,
@@ -79,11 +80,12 @@ nav ul {
     list-style: none;
     display: flex;
     position: absolute;
-    top: 40px;
+    top: 35px;
     right: 0; 
 }
 
-nav div{
+nav div,
+.sidebar div{
     position: absolute;
     top: 35px;
     left: 100px;
@@ -93,7 +95,8 @@ nav div{
     cursor: pointer;
 }
 
-nav img{
+nav img,
+.sidebar img{
     position: absolute;
     top: 30px;
     left: 55px;
@@ -102,6 +105,16 @@ nav img{
     width: 40px;
     height:40px;
     border-radius: 20px;
+}
+
+.sidebar div{
+    top: 25px;
+    left: 60px;
+}
+
+.sidebar img{
+    top: 15px;
+    left: 14px;
 }
 
 nav ul li {
@@ -302,7 +315,6 @@ legend{
     font-size: 1.2em;
 }
 
-
 .nav_menu{
     position: absolute;
     font-size: 2em;
@@ -314,14 +326,25 @@ legend{
     visibility: hidden;
 }
 
+.sidebar ul{
+    margin-top: 70px;
+}
+
 .sidebar li{
     padding: 20px;
+    border-bottom: 1px solid #f1efef;
     list-style: none;
 }
 
 .sidebar li a{
     color: black;
+    font-size: 2em;
     text-decoration: none;
+}
+
+.sidebar .icons{
+    font-size: 2em;
+    margin: 0;
 }
 
 .sidebar{
@@ -330,12 +353,10 @@ legend{
     left: 0;
     z-index: 1009;
     width: 100%;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background: white;
-    transform: translate(200%);
-    transform-origin: center;
+    place-content: center;
+    height: 100%;
+    background: #ffffff;
+    transform: translate(-100%);
     transition: transform 0.3s ease-in;
 }
 
@@ -347,7 +368,7 @@ legend{
     position: absolute;
     top: 15px;
     right: 15px;
-    font-size: 2em;
+    font-size: 2.5em;
     cursor: pointer;
 }
 
