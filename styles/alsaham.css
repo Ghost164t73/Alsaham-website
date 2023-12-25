@@ -182,6 +182,7 @@ nav ul li:last-child{
     object-fit: cover;
     box-shadow: 10px 10px 20px #d8d8d8;
     border-radius: 20px;
+    margin-left: 150px;
 }
 
 .blog img:nth-child(2){
@@ -353,15 +354,17 @@ legend{
     left: 0;
     z-index: 1009;
     width: 100%;
+    overflow: visible;
     place-content: center;
     height: 100%;
     background: #ffffff;
-    transform: translate(-100%);
+    transform: scale(0);
+    transform-origin:  top right ;
     transition: transform 0.3s ease-in;
 }
 
 .show-sidebar{
-    transform: translate(0%);
+    transform: scale(1);
 }
 
 .sidebar .ri-close-circle-line{
@@ -375,6 +378,7 @@ legend{
 @media  screen and (min-width: 676px) {
     .sidebar{
         width: 500px;
+        transform-origin: left top;
     }
 }
 
