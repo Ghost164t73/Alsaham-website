@@ -2,7 +2,7 @@
 
 * {
     margin: 0;
-    padding: 0
+    padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
     transition: linear .2s;
@@ -380,10 +380,6 @@ legend{
         width: 500px;
         transform-origin: left top;
     }
-}
-
-.bounce{
-    animation-iteration-count: 1;
 }
 
 @media  screen and (max-width: 1000px) {
