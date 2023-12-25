@@ -359,8 +359,8 @@ legend{
     height: 100%;
     background: #ffffff;
     transform: scale(0);
-    transform-origin:  top right ;
-    transition: transform 0.3s ease-in;
+    transform-origin: bottom;
+    transition: transform .4s ease-in-out;
 }
 
 .show-sidebar{
@@ -401,7 +401,7 @@ legend{
         padding: 1px;
         margin-top: 30px;
         width: 93vw;
-        margin-right: 0;
+        margin-left: 0;
     }
 }
 
