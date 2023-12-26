@@ -44,6 +44,39 @@ body {
     background: hsla(230, 100%, 98%);
 }
 
+.header-img-container{
+    position: relative;
+    margin: 2rem;
+    margin-top: 7rem;
+    border-radius: 1rem;
+    min-height: 600px;
+    background-image: linear-gradient(
+        to right,
+        rgba(44,56,85,.9),
+        rgba(100,125,187,0.1)),
+        url("../images/sophie-jonas-WC9dRfiBKDM-unsplash\ 1.png");
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+}
+
+.header-content{
+    max-width: 600px;
+    padding: 5rem 2rem;
+}
+
+.header-content h1{
+    margin-bottom: 1rem;
+    font-size: 3.5rem;
+    line-height: 4rem;
+    font-weight: 600;
+    color: white;
+}
+
+.header-content p{
+    color: white;
+}
+
 .sticky-header{
     border-bottom: 1px solid #dfdcdc;
     background-color: hsl(230, 100%, 98%, 95%);
@@ -63,14 +96,6 @@ nav ul li a:focus{
     transition: color 0.5s ease;
 }
 
-.header-img{
-    width: 100vw;
-    height: 800px;
-    margin-top: 75px;
-    padding: 30px;
-    border-radius: 50px;
-    object-fit: cover;
-}
 
 nav{
     justify-content: space-between;
@@ -193,6 +218,10 @@ nav ul li:last-child{
     .blog{
         margin: 0;
     }
+
+    .blog img{
+        margin-left: 0;
+    }
 }
 
 .move-blog-image{
@@ -227,7 +256,6 @@ nav ul li:last-child{
     display: flex;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 
 .full-container{
     transform: scale(1.2);
@@ -281,6 +309,10 @@ nav ul li:last-child{
     padding: 20px;
     justify-content: space-between;
     display: flex;
+}
+
+.message-container .sub-container{
+    border-radius: 1rem;
 }
 
 .message-container .sub-container:hover{
@@ -483,17 +515,22 @@ a .ri-twitter-fill:hover{
         left: 20px;
     }
 
-    .header-img{
-        padding: 10px;
-        height: 600px;
-        border-radius: 25px;
-    }
-
     .container,
     .message-container{
         display: block;
         margin: 0;
         width: 100%;
+    }
+
+    .header-img-container{
+        margin: 1.1rem;
+        margin-top: 5rem;
+        border-radius: 0.7rem;
+    }
+
+    .header-content h1{
+        font-size: 2.6rem;
+        line-height: 4rem;
     }
 
     .blog{
