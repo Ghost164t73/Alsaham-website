@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width = device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
-    <title>Alsaham</title>
+    <title>Our range...Alsaham</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
 
@@ -15,6 +15,72 @@
 
     <link rel="stylesheet" href="styles/mywebsite.css">
 
+    <style>
+        body{
+            min-height: 100vh
+        }
+        .container{
+            flex-direction: row;
+            width: 100%;
+            overflow: visible;
+            margin-bottom: 0;
+            background: transparent;
+            box-shadow: none;
+        }
+
+        .fade-in{
+            opacity: 0;
+            transform: translateY(20px);
+            transition: 0.5s linear;
+        }
+
+        .fade-in-active{
+            opacity: 1;
+            transition: opacity 1s ease-in ,transform 1s ease-in;
+            transform: translateY(-20px);
+        }
+
+        .container .sub-container{
+            border-radius: 10px;
+            margin: auto;
+            height: 225px;
+            width: 80%;
+            cursor:default;
+            margin-bottom: 30px;
+        }
+
+        .heading,
+        h3{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px auto;
+        }
+
+        .heading{width: 600px;text-align: center;line-height: 1.3;
+        color: #0767b5;}
+
+        .heading::first-line{
+           
+        }
+
+        .sub-container h1{
+            margin: 10px;
+            font-size: 1.2em;
+            color: #0767b5;
+        }
+
+
+        .last-container{
+            margin: 0;
+            bottom: 0;
+        }
+        @media screen and (max-width: 1300px){
+            .container .sub-container{
+                height: auto;
+            }
+        }
+    </style>
 
 </head>
 <body>
@@ -24,7 +90,7 @@
         <img src="images/image.png" alt="">
         <div>Alsaham</div>
         <ul class="ul">
-            <li><a href="#" class="">Home</a></li>
+            <li><a href="alsaham.html" class="">Home</a></li>
             <li><a href="Alsahamabout.html" class="">About</a></li>
             <li><a href="our board.html" class="">Our board</a></li>
             <li><a href="alsaham-contact.html" class="">Contact</a></li>
@@ -32,10 +98,11 @@
         </ul>
     </nav>
 
-    <i class="ri-menu-3-line nav_menu open-menu-button"></i>
- 
-
     <i class="ri-user-line nav__login" id="login-btn"></i>
+
+    <div id="content">
+        <i class="ri-menu-line nav__menu" id = "login-btn"></i>
+    </div>
   
 
  </div>
@@ -48,125 +115,55 @@
     </div>
  </section>
 
-
- <div class="sidebar">
-    <img src="images/image.png" alt="">
-    <div>Alsaham</div>
-    <i class="ri-close-circle-line close-menu-button"></i>
-    <ul>
-        <li>
-            <a href="alsaham.html">Home</a>
-        </li>
-        <li>
-            <a href="about.html">About</a>
-        </li>
-        <li>
-            <a href="our board.html">Our board</a>
-        </li>
-        <li>
-            <a href="contact.html">Contact</a>
-        </li>
-    </ul>
-
-    <section style="background: rgba(2, 140, 220); height: 20%; width: 100%; position: absolute; bottom: 0;" >
-        <div class="icons" style="">
-            <a href=""><i class="ri-instagram-line"></i></a>
-            <a href=""><i class="ri-facebook-circle-fill"></i></a>
-            <a href=""><i class="ri-linkedin-fill"></i></a>
-            <a href=""><i class="ri-twitter-fill"></i></a>
-        </div>
-
-        <div class="copyright" style="margin-top: 60px;color: white;">&copy; Alsaham Oil & Gas</div>
-
-    </section>
-</div>
-    
-</div>
-<section class="new-input">
-    <img src="images/new image.jpg" alt="picture" class="anime">
-    <div>
-    <p  class="first-paragraph">The need for energy is universal. That's why ExxonMobil scientists and engineers are pioneering new research and pursuing new technologies to reduce emissions while creating more efficient fuels. We're committed to responsibly meeting the world's energy needs.</p>
-    </div>
-</section>
-
-
-<div class="box" id="box-one" style="text-align: center;">
-    <h1>Your pit stop for quality fuel</h1>
-    <p class="box-one" style="padding: 20px;">Choose excellence, choose variety explore our Fuel Range for an unparalleled driving experience.
-    </p>
-</div>
-
-<section class="blog-section">
-    <div class="blog">
-        <img src="images/pexels-gustavo-fring-4173096.jpg" alt="">
-        <div>
-        <h1>Quality</h1>
-        <p>Fuel up your journey with us at 
-            <em>Alsaham</em>, where we redefine the 
-            gas station experience.We're a 
-            destination designed with your 
-            convenience and satisfaction in 
-            mind.</p> 
-        </div>
-    </div>
-
-    <div class="blog">
-        <img src="images/brad-starkey-iDIkZxzofDk-unsplash.jpg" alt="" class="image">
+    <section class="section">
         <div class="fade-in">
-        <div>
-        <h1>Quality</h1>
-        <p>Fuel up your journey with us at 
-            <em>Alsaham</em>, where we redefine the 
-            gas station experience.We're a 
-            destination designed with your 
-            convenience and satisfaction in 
-            mind.</p> 
+            <h1 class="heading">Embark on a journey of excellence with our exceptional Fuel Range, where every drop is crafted to elevate your driving experience</h1>
+            <h3> Here's a glimpse into what makes our fuel offerings stand out:</h3>
         </div>
-        </div>
-    </div>
-</section>
-
-
-<section>
-    <div class="container">
-        <div class="sub-container">
-            <h2>Discover our Fuel Range:</h2>
-            <p> We offer a wide selection of fuels, including gasoline, diesel, and more.</p>
-            <a href="our-range.html">Learn more</a>
-        </div>
-
-        <div class="sub-container">
-            <h2>Premium Quality:</h2>
-            <p> Our fuels meet the highest standards for efficiency and performance.</p>
-            <a href="CSS.html">Learn more</a>
-        </div>
-
-        <div class="sub-container">
-            <h2>Our Commitment: </h2>
-            <p>Providing clean, efficient, and sustainable fuel solutions.</p>
-            <a href="">learn more</a>
-        </div>
-    </div>
-</section>
-    <section class="customers">
-        <h1 class="heading"> What Our Customers Say: </h1>
-            <h2>Read about the experiences of our satisfied customers</h2>
-        
     </section>
 
-    <div class="message-container">
-        <div class="sub-container">
-          Our Fuel Range is synonymous with efficiency. Experience a seamless and fuel-efficient drive that goes beyond the ordinary.
-        </div>
-        <div class="sub-container">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nihil blanditiis maiores molestiae aliquam facilis et ducimus, porro eos. Quidem veniam qui nobis corrupti sed adipisci possimus dicta excepturi optio.
-        </div>
-
-        <div class="sub-container">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae, eum et, dolorem aperiam eos consequuntur temporibus inventore corporis magni culpa dolor sint, qui perspiciatis! Ipsam iusto aut dignissimos laudantium animi.
-        </div>
+    <div class="fade-in">
+        <div class="container">
+            <div>
+                <div class="sub-container">
+                    <h1>Unlock the Drive</h1>
+                    <p> Explore the untapped potential our Fuel Range brings to your vehicle. It's not just about fuel; it's about unlocking a new era of performance, efficiency, and satisfaction.
+                    </p>
+                </div>
+                <div class="sub-container">
+                    <h1>Quality Assurance</h1>
+                    <p>  Each drop of our fuel undergoes rigorous testing, ensuring that you receive a consistent and high-quality product every time you fill up.
+                    </p>
+                </div>
+                </div>
+                <div>
+                <div class="sub-container">
+                    <h1>Sustainability Commitment</h1>
+                    <p>Drive with a purpose. Our fuels incorporate eco-friendly additives, reflecting our commitment to environmental responsibility and reducing emissions.
+                    </p>
+                </div>
+                <div class="sub-container">
+                    <h1> Efficiency Redefined</h1>
+                    <p> Our Fuel Range is synonymous with efficiency. Experience a seamless and fuel-efficient drive that goes beyond the ordinary.
+                    </p><br>
+                </div>
+                </div>
+                <div>
+                <div class="sub-container">
+                    <h1>Advanced Additives</h1>
+                    <p> Enrich your engine with cutting-edge additives that not only clean but also protect, ensuring the longevity and health of your vehicle's heart.
+                    </p>
+                </div>
+                <div class="sub-container">
+                    <h1>Versatility at Its Core</h1>
+                    <p>Tailored to meet the diverse needs of drivers, our fuels are versatile, whether you're navigating urban streets, embarking on a road trip, or tackling off-road adventures.
+                    </p>
+                </div>
+            </div>
+        </div>  
     </div>
-
+    
+    
     <div class="last-container">
         <div class="inner-container">
             <div class="first-class">
@@ -206,9 +203,7 @@
 
     </div>
 
+    <script src="js/alsaham.js"></script>
 
-
-<script src="js/alsaham.js"></script>
-</body>
-
+    </body>
 </html>
