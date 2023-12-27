@@ -33,6 +33,19 @@ body {
     font-family: sans-serif;
 }
 
+
+.fade-in{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.5s linear;
+}
+
+.fade-in-active{
+    opacity: 1;
+    transition: opacity 1s ease-in ,transform 1s ease-in;
+    transform: translateY(-20px);
+}
+
 .header {
     height: 5.5rem;
     padding: 15px;
@@ -48,7 +61,7 @@ body {
     position: relative;
     margin: 2rem;
     margin-top: 7rem;
-    border-radius: 1rem;
+    border-radius: 1.5rem;
     min-height: 600px;
     background-image: linear-gradient(
         to right,
@@ -75,12 +88,13 @@ body {
 
 .header-content p{
     color: white;
+    font-size: 1.5em;
 }
 
 .sticky-header{
-    border-bottom: 1px solid #dfdcdc;
     background-color: hsl(230, 100%, 98%, 95%);
     transition: background-color 3s ease;
+    box-shadow: 0 2px 16px hsla(230, 75%, 32%, .15);
 }
 
 nav ul li a{
@@ -95,7 +109,6 @@ nav ul li a:focus{
     color: #028cdc;
     transition: color 0.5s ease;
 }
-
 
 nav{
     justify-content: space-between;
