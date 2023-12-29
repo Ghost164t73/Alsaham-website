@@ -36,14 +36,14 @@ body {
 
 .fade-in{
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(50px);
     transition: 0.5s linear;
 }
 
 .fade-in-active{
     opacity: 1;
     transition: opacity 1s ease-in ,transform 1s ease-in;
-    transform: translateY(-20px);
+    transform: translateY(0px);
 }
 
 .header {
@@ -65,8 +65,8 @@ body {
     min-height: 600px;
     background-image: linear-gradient(
         to right,
-        rgba(44,56,85,.9),
-        rgba(100,125,187,0.1)),
+        rgba(44,56,85,1),
+        rgba(235, 241, 255, 0.1)),
         url("../images/sophie-jonas-WC9dRfiBKDM-unsplash\ 1.png");
         background-position: center center;
         background-size: cover;
@@ -104,8 +104,7 @@ nav ul li a{
     font-size: 1.3em;
 }
 
-nav ul li a:hover,
-nav ul li a:focus{
+nav ul li a:hover{
     color: #028cdc;
     transition: color 0.5s ease;
 }
@@ -315,6 +314,11 @@ nav ul li:last-child{
     align-items: center;
     flex-direction: column;
     padding: 30px;
+}
+
+.customers h1,
+.customers h2{
+    color:#036aa6;
 }
 
 .message-container{
@@ -557,18 +561,19 @@ a .ri-twitter-fill:hover{
 
     .blog div{
         width: 100%;
-        margin: 5px;
+        margin: 1px;
     }
 
     .blog div h1{
         padding:15px;
         padding-bottom: 1px;
+        padding-left: 10px;
     }
 
     .blog div p{
         width: 100%;
         padding-top: 4px;
-        padding: 15px;
+        padding: 10px;
         margin-bottom: 40px ;
         font-size: 1em;
         line-height: 1.4;
