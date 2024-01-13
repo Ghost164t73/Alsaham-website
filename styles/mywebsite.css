@@ -60,7 +60,6 @@
 .box{
     width: 100%;
     height: auto;
-    margin: auto;
     font-size: 1em;
     border: 1px solid transparent;
 }
@@ -117,10 +116,5 @@
       display: none;
     }
 
-    .box{
-        width: 100%;
-        padding: 30px;
-        font-size: 0.7em;
-        color: #111;
-    }
+  
 }
